@@ -1,20 +1,25 @@
-//Find out the area of a triangle:
+//Find out the smallest number:
 #include<stdio.h>
-int main()
-{
-    float base;
-    float height;
-    float area;
 
-    printf("Enter the value of base:");
-    scanf("%f", &base);
+int main() {
+  int i, n;
+  float num, smallest;
 
-    printf("Enter the value of height:");
-    scanf("%f", &height);
+  printf("Enter the total number of elements:");
+  scanf("%d", &n);
 
-    area = 0.5* base* height;
-    printf("The area is : %f", area);
+ printf("Enter number 1:\n");
+ scanf("%f", &smallest);  //10 
 
-    return 0;
+ for(i=2; i<=n; i++){
+    printf("Enter number %d:", i);
+    scanf("%f", &num); //5
 
+    if(num< smallest){
+        smallest = num;
+    }
+ }
+ printf("The smallest number is:%f", smallest);
+
+  return 0;
 }
